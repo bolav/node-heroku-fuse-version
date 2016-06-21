@@ -24,7 +24,10 @@ app.get('/', function(request, response) {
   	hres.on('end', function() {
   		var travis = YAML.parse(data);
   		// console.log(travis.env.global);
-  		var arrayLength = travis.env.global.length;
+      var arrayLength = 0;
+      if (travis.env && travis.env.global) {
+        arrayLength = travis.env.global.length;
+      }
   		for (var i = 0; i < arrayLength; i++) {
   		    var ver = /^FUSE\_VERSION\=(\d+\.\d+\.\d+)/.exec(travis.env.global[i]);
   		    if (ver) {
