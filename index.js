@@ -9,6 +9,10 @@ app.get('/', function(request, response) {
   // https://github.com/bolav/fuse-sqlite
   // https://raw.githubusercontent.com/bolav/fuse-sqlite/master/.travis.yml
   var repo = request.query["repo"];
+  if (!repo) {
+  	response.send('Needs repo parameter');
+  	return;
+  }
   repo = repo.replace('/github.com/', '/raw.githubusercontent.com/');
   repo = repo + '/master/.travis.yml';
   console.log(repo);
