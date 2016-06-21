@@ -1,6 +1,6 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
+  "name": "node-heroku-fuse-version",
+  "version": "0.1.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "5.9.1"
@@ -10,12 +10,12 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "yamljs": "^0.2.7"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/bolav/node-heroku-fuse-version"
   },
   "keywords": [
     "node",
